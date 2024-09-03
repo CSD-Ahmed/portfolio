@@ -334,7 +334,7 @@ h3.my-profession {
 }
 
 .about .about-content .personal-info .row {
-  display: grid;
+  display: inline;
   grid-template-columns: 40% 60%;
 }
 
