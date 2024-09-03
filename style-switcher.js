@@ -1,16 +1,15 @@
-console.log(window, "ahmed window");
-
 const styleSwitcherToggle = document.querySelector(".style-switcher-toggler");
 styleSwitcherToggle.addEventListener("click", () => {
   document.querySelector(".style-switcher").classList.toggle("open");
 });
-// hide style switcher on scroll
+
 window.addEventListener("scroll", () => {
-  if (document.querySelector(".style-switcher").classList.contains("open")) {
-    document.querySelector(".style-switcher").classList.remove("open");
+  const styleSwitcher = document.querySelector(".style-switcher");
+  if (styleSwitcher.classList.contains("open")) {
+    styleSwitcher.classList.remove("open");
   }
 });
-/*============== theme colors =======*/
+// Ensure this is at the global level
 const alternateStyles = document.querySelectorAll(".alternate-style");
 function setActiveStyle(color) {
   alternateStyles.forEach((style) => {
@@ -21,7 +20,6 @@ function setActiveStyle(color) {
     }
   });
 }
-
 /*============== theme light and dark mode =======*/
 const dayNight = document.querySelector(".day-night");
 dayNight.addEventListener("click", () => {
