@@ -36,3 +36,17 @@ window.addEventListener("load", () => {
     document.body.classList.remove("dark");
   }
 });
+
+// Select all list items
+const navItems = document.querySelectorAll(".nav li a");
+
+// Loop through each item and add a click event listener
+navItems.forEach((item) => {
+  item.addEventListener("click", function () {
+    // Remove 'active' class from all items
+    navItems.forEach((nav) => nav.classList.remove("active"));
+    console.log(this);
+    // Add 'active' class to the clicked item
+    this.classList.add("active");
+  });
+});
